@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createBrowserHistory } from 'history';
 import { ConnectedRouter } from 'react-router-redux';
 import CounterPage from '../../app/containers/CounterPage';
-import { configureStore } from '../../app/store/configureStore';
+import { configureStore } from '../../app/reduxStore/configureStore';
 
 function setup(initialState) {
   const store = configureStore(initialState);
@@ -14,12 +14,12 @@ function setup(initialState) {
       <ConnectedRouter history={history}>
         <CounterPage />
       </ConnectedRouter>
-    </Provider>
+    </Provider>,
   );
   return {
     app,
     buttons: app.find('button'),
-    p: app.find('.counter')
+    p: app.find('.counter'),
   };
 }
 
