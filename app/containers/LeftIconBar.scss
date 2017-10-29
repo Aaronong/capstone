@@ -1,0 +1,10 @@
+$left-icon-bar-background: #333333;
+$left-icon-bar-icon: #adadad;
+@import "../extensions/stylePacks/currentStyle.scss";
+
+.iconBar {
+  width: 60px;
+  min-width: 60px;
+  background-color: $left-icon-bar-background;
+  height: 100%;
+}

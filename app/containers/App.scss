@@ -1,0 +1,10 @@
+.appLayout {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  border-left-width: 5px;
+}
+
+.paneStyle {
+  overflow-x: scroll;
+}
