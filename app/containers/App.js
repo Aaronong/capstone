@@ -63,12 +63,7 @@ export default class App extends Component {
           <LeftExplorer />
         </div>
         <div className={styles.appLayout}>
-          <SplitPane
-            split="vertical"
-            paneStyle={styles.paneStyle}
-            minSize={60}
-            maxSize={this.state.maxSecondaryWidth}
-          >
+          <SplitPane split="vertical" minSize={60} maxSize={this.state.maxSecondaryWidth}>
             <div>
               <MainContent />
             </div>

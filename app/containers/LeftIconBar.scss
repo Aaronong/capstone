@@ -1,5 +1,7 @@
 $left-icon-bar-background: #333333;
 $left-icon-bar-icon: #adadad;
+$left-icon-bar-icon-hover: white;
+$left-icon-bar-icon-active: white;
 @import "../extensions/stylePacks/currentStyle.scss";
 
 .iconBar {
@@ -7,4 +9,32 @@ $left-icon-bar-icon: #adadad;
   min-width: 60px;
   background-color: $left-icon-bar-background;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $left-icon-bar-icon;
+  &:hover {
+    color: $left-icon-bar-icon-hover;
+  }
+}
+
+.iconActive {
+  @extend .icon;
+  color: $left-icon-bar-icon-active;
+}
+
+.iconEnd {
+  @extend .icon;
+  justify-content: flex-end;
+}
+
+.iconEndActive {
+  @extend .iconEnd;
+  color: $left-icon-bar-icon-active;
 }

@@ -2,10 +2,12 @@
 import { combineReducers } from 'redux';
 import { routerReducer as router } from 'react-router-redux';
 import counter from './counter';
+import tabNavigation from './tabNavigation';
 
 const rootReducer = combineReducers({
   counter,
   router,
+  tabNavigation,
 });
 
 export default rootReducer;
