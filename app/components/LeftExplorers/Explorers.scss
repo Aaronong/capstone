@@ -1,3 +1,80 @@
+$left-explorer-background: #252526;
+$left-explorer-header: #383838;
+$left-explorer-item-active: #3f3f46;
+$left-explorer-item-hover: #2a2d2e;
+$left-explorer-font: #c5c5c5;
+$left-explorer-font-secondary: #999999;
+@import "../../extensions/stylePacks/currentStyle.scss";
+
+.fontPrimary {
+  color: $left-explorer-font;
+}
+
+.fontSecondary {
+  color: $left-explorer-font-secondary;
+}
+
+.explorerTitle {
+  @extend .fontPrimary;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  padding: 10px 0 10px 20px;
+}
+
 .explorerContainer {
+  @extend .fontPrimary;
+  width: 100%;
   overflow: hidden;
+  background-color: $left-explorer-background;
+}
+
+.explorerHeader {
+  @extend .fontPrimary;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 5px 0 5px 20px;
+  white-space: nowrap;
+  background-color: $left-explorer-header;
+}
+
+.explorerItem {
+  @extend .fontPrimary;
+  background-color: $left-explorer-background;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 5px 0 5px 40px;
+  &:hover {
+    background-color: $left-explorer-item-hover;
+  }
+}
+
+.explorerItemActive {
+  @extend .explorerItem;
+  background-color: $left-explorer-item-active;
+  &:hover {
+    background-color: $left-explorer-item-active;
+  }
+}
+
+.openItem {
+  @extend .explorerItem;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.openItemActive {
+  @extend .openItem;
+  background-color: $left-explorer-item-active;
+  &:hover {
+    background-color: $left-explorer-item-active;
+  }
+}
+
+.small {
+  font-size: 12px;
+  padding-right: 8px;
 }
